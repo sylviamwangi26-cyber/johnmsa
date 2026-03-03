@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First Place Palace | 3D Luxury Excellence</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        navy: '#002B5B',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .perspective-logo {
+            perspective: 2000px;
+        }
+
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+
+<body class="splash-body overflow-hidden bg-black">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 p-6 md:p-8 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="md:hidden logo text-2xl font-bold">
+                <span class="text-gold">TFP</span><span class="text-white">P</span>
+            </a>
+            <ul class="hidden md:flex space-x-12 text-white font-semibold mx-auto">
+                <li><a href="properties.html" class="hover:text-gold transition-colors">Properties</a></li>
+                <li><a href="contact.html#about" class="hover:text-gold transition-colors">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-gold transition-colors">Contact Us</a></li>
+            </ul>
+            <button id="mobile-menu" class="md:hidden text-white text-3xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Nav -->
+        <ul id="mobile-nav"
+            class="hidden flex flex-col items-center bg-navy/95 p-8 space-y-6 absolute top-full left-0 w-full shadow-2xl transition-all duration-300">
+            <li><a href="properties.html" class="text-white text-xl hover:text-gold">Properties</a></li>
+            <li><a href="contact.html#about" class="text-white text-xl hover:text-gold">About Us</a></li>
+            <li><a href="contact.html" class="text-white text-xl hover:text-gold">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3D SPLASH CONTENT -->
+    <main class="h-screen flex items-center justify-center p-4 perspective-logo">
+        <div class="text-center preserve-3d relative">
+            <div class="logo-large mb-8 transition-transform duration-100 ease-out cursor-pointer" id="logo-3d">
+                <span class="text-gold block leading-none text-5xl md:text-8xl">THE FIRST PLACE</span>
+                <span class="text-white block leading-tight text-6xl md:text-9xl tracking-tighter">PALACE</span>
+            </div>
+            <p class="text-white text-xl md:text-2xl font-light tracking-widest mb-12 opacity-90 animate-pulse">Luxury
+                living, redefined in Kenya</p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="properties.html"
+                    class="bg-gold text-white px-10 py-4 rounded font-bold uppercase tracking-wider hover:bg-yellow-600 transition-all transform hover:scale-110 hover:rotate-3 shadow-[0_20px_50px_rgba(212,175,55,0.3)]">
+                    Enter the Palace
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/254706001654"
+        class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-full flex items-center space-x-4 shadow-[0_0_20px_rgba(37,211,102,0.5)] z-[1001]"
+        target="_blank">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="font-bold hidden sm:inline">Connect with Us</span>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // 3D Mouse Movement effect for logo
+        const logo = document.getElementById('logo-3d');
+        document.addEventListener('mousemove', (e) => {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            const mouseX = e.pageX - centerX;
+            const mouseY = e.pageY - centerY;
+
+            const rotateX = (mouseY / centerY) * -15;
+            const rotateY = (mouseX / centerX) * 15;
+
+            logo.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(100px)`;
+        });
+
+        // Mobile Menu Script for Splash
+        const menuBtn = document.getElementById('mobile-menu');
+        const mobileNav = document.getElementById('mobile-nav');
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+
+</html>

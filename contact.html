@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & About | The First Place Palace</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        navy: '#002B5B',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="navbar internal-nav scrolled fixed top-0 w-full z-50 py-4 shadow-xl">
+        <div class="container nav-container flex justify-between items-center px-6 mx-auto">
+            <a href="index.html" class="logo text-2xl font-bold flex items-center">
+                <span class="text-gold">TFP</span><span class="text-white ml-2">P</span>
+            </a>
+            <ul class="nav-links hidden md:flex space-x-8 text-white">
+                <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                <li><a href="properties.html" class="hover:text-gold transition-colors">Properties</a></li>
+                <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                <li><a href="contact.html" class="text-gold border-b-2 border-gold pb-1 font-semibold">Contact Us</a>
+                </li>
+            </ul>
+            <button id="mobile-menu" class="md:hidden text-white text-3xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Nav -->
+        <ul id="mobile-nav"
+            class="hidden flex flex-col items-center bg-navy p-8 space-y-6 absolute top-full left-0 w-full shadow-2xl transition-all duration-300">
+            <li><a href="index.html" class="text-white text-xl">Home</a></li>
+            <li><a href="properties.html" class="text-white text-xl">Properties</a></li>
+            <li><a href="#about" class="text-white text-xl">About Us</a></li>
+            <li><a href="contact.html" class="text-gold text-xl">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section class="about section-padding pt-32 pb-20 bg-white" id="about">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="about-img relative perspective-logo">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="About Palace"
+                        class="rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div
+                        class="absolute -bottom-8 -right-8 bg-gold p-8 rounded-2xl shadow-2xl text-white hidden md:block">
+                        <span class="text-4xl font-bold">10+</span>
+                        <p class="text-sm">Premium Years</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="text-4xl md:text-5xl font-serif mb-8">About <span class="text-gold">The First Place
+                            Palace</span></h2>
+                    <p class="text-gray-600 text-lg mb-6">Welcome to a sanctuary of luxury. The First Place Palace
+                        represents the pinnacle of real estate in Kenya, offering more than just properties—we offer
+                        portals to a life of distinction.</p>
+                    <p class="text-gray-600 mb-8">Our concierge-style service ensures that whether you are buying a
+                        mansion in Karen, high-rise luxury in Kileleshwa, or prime heritage land, you are guided with
+                        expert precision.</p>
+                    <div class="flex gap-10">
+                        <div class="text-center">
+                            <h3 class="text-4xl font-bold text-navy">500+</h3>
+                            <p class="text-gray-500 text-sm">Palaces Managed</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-4xl font-bold text-navy">98%</h3>
+                            <p class="text-gray-500 text-sm">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (8+) -->
+    <section class="testimonials section-padding bg-navy py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-white text-4xl md:text-5xl font-serif">Voice of Our <span
+                        class="text-gold">Residents</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonials 1-8 -->
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"The most professional experience I've had in Nairobi. They
+                        truly find the palaces."</p>
+                    <div class="client text-gold font-bold">Waris Dirie</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"The Nanyuki plot I bought through them is a slice of heaven.
+                        Pure professional."</p>
+                    <div class="client text-gold font-bold">Benson Koech</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"My property management is now stress-free. TFP Palace is the
+                        gold standard."</p>
+                    <div class="client text-gold font-bold">Amina Juma</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"Luxury isn't just a word with them; it's the reality of every
+                        viewing."</p>
+                    <div class="client text-gold font-bold">Kevin Maina</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"Transparency and speed. They are the best in the market, hands
+                        down."</p>
+                    <div class="client text-gold font-bold">Lucy Wambui</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"Excellent service from the first call to the final
+                        documentation."</p>
+                    <div class="client text-gold font-bold">Dr. Omondi</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"If you want to live like royalty, start your journey here."
+                    </p>
+                    <div class="client text-gold font-bold">Grace Njenga</div>
+                </div>
+                <div
+                    class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold transition-colors duration-300">
+                    <p class="text-white/80 italic mb-6">"Total trust. Total luxury. Total Palace."</p>
+                    <div class="client text-gold font-bold">Steve K.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED BOOKING FORM -->
+    <section class="booking-section py-20 bg-gray-100" id="contact">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div
+                class="bg-navy rounded-3xl shadow-[0_40px_80px_rgba(0,0,0,0.5)] overflow-hidden scale-100 md:scale-105">
+                <div class="p-12">
+                    <div class="text-center mb-12">
+                        <h2 class="text-white text-3xl font-serif">Secure Your <span class="text-gold">Palace</span>
+                            Appointment</h2>
+                        <p class="text-white/60 mt-2">Personalized consultations for elite property interests.</p>
+                    </div>
+                    <form action="#" class="space-y-6" id="palace-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Your Full Name"
+                                class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white focus:outline-none focus:border-gold transition-all"
+                                required>
+                            <input type="email" placeholder="Your Email Address"
+                                class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white focus:outline-none focus:border-gold transition-all"
+                                required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="tel" placeholder="Your Phone Number"
+                                class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white focus:outline-none focus:border-gold transition-all"
+                                required>
+                            <input type="text" placeholder="Property Location (e.g. Karen)"
+                                class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white focus:outline-none focus:border-gold transition-all"
+                                required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <select
+                                class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white/50 focus:outline-none focus:border-gold transition-all"
+                                required>
+                                <option value="" disabled selected>Property Type</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="shamba">Shamba / Land</option>
+                            </select>
+                            <select
+                                class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white/50 focus:outline-none focus:border-gold transition-all"
+                                required>
+                                <option value="" disabled selected>Your Role</option>
+                                <option value="buyer">Elite Buyer</option>
+                                <option value="seller">Property Seller</option>
+                                <option value="leaser">Leaser / Management Request</option>
+                            </select>
+                        </div>
+                        <textarea rows="4" placeholder="Detail your specific palace requirements..."
+                            class="w-full bg-white/10 border border-white/20 rounded-xl p-4 text-white focus:outline-none focus:border-gold transition-all"
+                            required></textarea>
+                        <button type="submit"
+                            class="w-full bg-gold text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-lg hover:bg-yellow-600 shadow-[0_10px_30px_rgba(212,175,55,0.4)] transform transition-active group active:scale-95">
+                            Submit Palace Inquiry <i
+                                class="fas fa-crown ml-2 group-hover:rotate-12 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black text-white text-center">
+        <div class="container mx-auto">
+            <p class="opacity-40">&copy; 2026 The First Place Palace | Built for Excellence</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/254706001654"
+        class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-full flex items-center space-x-4 shadow-[0_0_20px_rgba(37,211,102,0.5)] z-[1001]"
+        target="_blank">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="font-bold hidden sm:inline">Connect on WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
